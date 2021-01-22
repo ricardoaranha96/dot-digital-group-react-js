@@ -1,0 +1,175 @@
+.section-contact {
+    position: relative;
+    background: #707070;
+    overflow: hidden;
+}
+
+.section-contact::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #434343;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.section-contact__inner {
+    padding: 15px 0;
+}
+
+.form-contact {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.form-contact .row:not(:last-child) .form-contact__form-element {
+    margin-bottom: .6rem;
+}
+
+.form-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    background: #BFBFBF;
+    border-radius: 12px;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+/*
+Referência: https://stackoverflow.com/a/45674671/7015083
+*/
+
+.form-group:focus-within, .form-group:hover {
+    background: #d8d8d8;
+}
+
+.form-group__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #303030;
+    padding: 18px 0 18px 25px;
+    flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    white-space: nowrap;
+}
+
+.form-group__input {
+    flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    background: transparent;
+    border: 0;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding: 18px 25px 18px 10px;
+    /*Referência: https://stackoverflow.com/a/42421490/7015083*/
+    min-width: 0;
+}
+
+.form-group__input:focus {
+    outline: 0;
+}
+
+.form-group__input:-internal-autofill-selected {
+    background: transparent !important;
+}
+
+.form-group-textarea {
+    background: #BFBFBF;
+    border-radius: 12px;
+    position: relative;
+}
+
+.form-group-textarea:focus-within, .form-group-textarea:hover {
+    background: #d8d8d8;
+}
+
+.form-group-textarea__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #303030;
+    padding: 18px 0 18px 25px;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    cursor: text;
+}
+
+.form-group-textarea__label__placeholder {
+    color: #757575;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.form-group-textarea__textarea {
+    font-family: "Roboto", sans-serif;
+    flex-grow: 1;
+    background: transparent;
+    border: 0;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    resize: none;
+    height: 130px;
+    margin-top: 50px;
+    padding: 0 25px 25px 25px;
+    width: 100%;
+}
+
+.form-group-textarea__textarea:focus {
+    outline: 0;
+}
+
+.form-group-textarea__textarea:valid+.form-group-textarea__label .form-group-textarea__label__placeholder {
+    display: none;
+}
+
+.form-button {
+    background: #FFFFFF;
+    color: #303030;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    padding: 18px 45px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background: #303030;
+    color: white;
+}
+
+.form-button:focus {
+    outline: 0;
+}
+
+.footer {
+    padding: 32px 15px;
+    background: #313131;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 991px) {
+    .form-contact .row:last-child .form-contact__form-element {
+        margin-top: .4rem;
+    }
+}
+
+@media(min-width: 992px) {
+    .section-contact__inner {
+        padding: 40px 0 35px;
+    }
+    .form-contact .row:not(:last-child) .form-contact__form-element {
+        margin-bottom: 1.5rem;
+    }
+}

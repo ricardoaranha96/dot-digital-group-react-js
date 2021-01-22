@@ -1,0 +1,16 @@
+.section-slides {
+    background: #434343;
+    padding: 15px 0 30px;
+}
+
+@media(min-width: 768px) {
+    .section-slides {
+        padding: 45px 0 70px;
+    }
+}
+
+@media(min-width: 992px) {
+    .section-accordion {
+        padding: 50px 0 60px;
+    }
+}

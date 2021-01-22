@@ -1,0 +1,101 @@
+.accordion__item__head {
+    background: #707070;
+    color: white;
+    padding: 25px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.accordion__item__head:hover {
+    opacity: .8;
+}
+
+.accordion__item:first-child .accordion__item__head {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.accordion__item:last-child .accordion__item__head {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.accordion__item--active .accordion__item__head {
+    background: white;
+    color: #707070;
+}
+
+.accordion__item--active .accordion__item__head:hover {
+    opacity: .4;
+}
+
+.accordion__item--active:last-child .accordion__item__head {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accordion__item__head__arrow__col__arrow--active {
+    display: none;
+}
+
+.accordion__item--active .accordion__item__head__arrow__col__arrow--inactive {
+    display: none;
+}
+
+.accordion__item--active .accordion__item__head__arrow__col__arrow--active {
+    display: inline-block
+}
+
+.accordion__item__body {
+    max-height: 1px;
+    transition: 0.3s ease-in-out;
+    background: white;
+    overflow: hidden;
+}
+
+.accordion__item:last-child .accordion__item__body {
+    max-height: 0;
+}
+
+.accordion__item--active .accordion__item__body {
+    max-height: 500px;
+}
+
+.accordion__item--active:last-child .accordion__item__body {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    max-height: 500px;
+}
+
+.accordion__item__body__content {
+    padding: 1px 25px 20px;
+}
+
+.accordion__item__body__content__col-image {
+    flex: 0 0 100%;
+}
+
+.accordion__item__body__content__col-image__image {
+    border: 10px solid #707070;
+    margin: 0 auto;
+    display: block;
+}
+
+.accordion__item__body__content__description {
+    color: #707070;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media(min-width: 992px) {
+    .accordion__item__body__content__col-image {
+        flex: 0 0 0;
+    }
+    .accordion__item__body__content__description {
+        flex: 1 1 0;
+        text-align: left;
+        margin-top: 0;
+    }
+}

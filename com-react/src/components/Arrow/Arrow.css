@@ -1,0 +1,33 @@
+.arrow-icon {
+    display: inline-block;
+}
+
+.arrow-icon--big-black-down {
+    background: url(../../assets/img/big-black-down-arrow.png);
+    width: 35px;
+    height: 50px;
+}
+
+.arrow-icon--big-white-left {
+    background: url(../../assets/img/big-white-left-arrow.png);
+    width: 50px;
+    height: 35px;
+}
+
+.arrow-icon--big-white-right {
+    background: url(../../assets/img/big-white-right-arrow.png);
+    width: 50px;
+    height: 35px;
+}
+
+.arrow-icon-small-white-down {
+    background: url(../../assets/img/small-white-down-arrow.png);
+    width: 18px;
+    height: 25px;
+}
+
+.arrow-icon-small-black-up {
+    background: url(../../assets/img/small-black-up-arrow.png);
+    width: 18px;
+    height: 25px;
+}

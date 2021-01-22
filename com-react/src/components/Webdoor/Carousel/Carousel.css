@@ -1,0 +1,87 @@
+.carousel {
+    position: relative;
+    background: #6f6f6f;
+}
+
+.carousel__inner {
+    display: table;
+    margin: 0 auto;
+}
+
+/*
+Referência: https://stackoverflow.com/a/6943704/7015083
+*/
+
+.carousel__inner__item {
+    display: none;
+    animation: displayOpacityAnimation 1s;
+}
+
+.carousel__inner__item--active {
+    display: block;
+}
+
+@keyframes displayOpacityAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.carousel__inner__item__image {
+    max-width: 100%;
+}
+
+.carousel__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(49, 49, 49, 0.65);
+    margin: 0;
+    padding: 6px 0;
+}
+
+.carousel__controls__control {
+    display: inline-block;
+    vertical-align: middle;
+    background: white;
+    width: 27px;
+    height: 27px;
+    border: 4px solid #343434;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.carousel__controls__control:hover {
+    opacity: .7;
+}
+
+.carousel__controls__control--active {
+    background: #4d6128;
+    border-color: white;
+    width: 28px;
+    height: 28px;
+}
+
+@media(min-width: 992px) {
+    .carousel__controls {
+        padding: 20px 0;
+        background: rgba(49, 49, 49, 0.75);
+    }
+    .carousel__controls__control {
+        width: 48px;
+        height: 48px;
+        border-width: 8px;
+        margin: 0 5px;
+    }
+    .carousel__controls__control--active {
+        width: 51px;
+        height: 51px;
+        border-width: 9px;
+    }
+}

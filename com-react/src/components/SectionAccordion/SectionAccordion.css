@@ -1,0 +1,10 @@
+.section-accordion {
+    background: #BFBFBF;
+    padding: 15px 0;
+}
+
+@media(min-width: 992px) {
+    .section-accordion {
+        padding: 50px 0 60px;
+    }
+}

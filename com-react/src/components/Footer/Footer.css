@@ -1,0 +1,9 @@
+.footer {
+    padding: 32px 15px;
+    background: #313131;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
